@@ -14,7 +14,7 @@ exports.config = {
     WebDriver: {
       url: 'https://www.qa-legacy.com',  // Set the base URL
       browser: 'chrome',
-      waitForTimeout: 10000,
+      waitForTimeout: 5000,
       windowSize: '1200x900'    
     }
   },
