@@ -1,9 +1,5 @@
 const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
-// turn on headless mode when running with HEADLESS=true environment variable
-// export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
-
-// enable all common plugins https://github.com/codeceptjs/configure#setcommonplugins
 setCommonPlugins();
 
 /** @type {CodeceptJS.MainConfig} */
@@ -12,10 +8,13 @@ exports.config = {
   output: './output',
   helpers: {
     WebDriver: {
-      url: 'https://www.qa-legacy.com',  // Set the base URL
+      url: 'https://www.qa-legacy.com',  // Base URL
       browser: 'chrome',
       waitForTimeout: 5000,
       windowSize: '1200x900'    
+    },
+    LegacyDb: {
+      require: './helpers/LegacyDb.js'
     }
   },
   include: {

@@ -1,4 +1,4 @@
-const { I } = require('../helper'); 
+const { I } = require('../helpers/helper'); 
 
 class ObituaryDetailsPage {
     constructor() {
