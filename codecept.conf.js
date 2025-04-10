@@ -15,6 +15,12 @@ exports.config = {
     },
     LegacyDb: {
       require: './helpers/LegacyDb.js'
+    },
+    REST: {
+      endpoint: 'https://www.qa-legacy.com',
+      defaultHeaders: {
+        'Content-Type': 'application/json'
+      }
     }
   },
   include: {
