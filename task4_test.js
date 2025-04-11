@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-Feature('Obituary status check');
+Feature('Obituary @rest status check @janus');
 
 Scenario('Check an error URL returns 404', async ({ I }) => {
   const response = await I.sendGetRequest('/us/obituaries/error-url');
@@ -8,7 +8,7 @@ Scenario('Check an error URL returns 404', async ({ I }) => {
 });
 
 const statusTable = [
-  { url: '/us/obituaries/error-url', expectedStatus: 404 },
+  { url: '/us/obituaries/chicagotribune/name/virginia-gruchalski-obituary', expectedStatus: 404 },
   { url: '/us/obituaries/chicagotribune/name/virginia-gruchalski-obituary?pid=196167379', expectedStatus: 200 }
 ];
 
